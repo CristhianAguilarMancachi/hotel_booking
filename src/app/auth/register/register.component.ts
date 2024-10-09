@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   email: string = '';
   password: string = '';
+  name: string = '';
+  phone: string = '';
+  address: string = ''; // Añadimos la dirección
   role: string = 'usuario'; // Definimos el rol por defecto como 'usuario'
   errorMessage: string = '';
 
@@ -16,7 +19,8 @@ export class RegisterComponent {
 
   async onRegister() {
     try {
-      await this.authService.registerUser(this.email, this.password, this.role);
+      // Pasamos la dirección como parte del registro
+      await this.authService.registerUser(this.email, this.password, this.name, this.phone, this.address, this.role);
       this.router.navigate(['/login']); // Redirigir a la página de login después del registro
     } catch (error: any) {
       this.errorMessage = 'Error en el registro: ' + error.message;

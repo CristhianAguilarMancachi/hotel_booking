@@ -22,7 +22,6 @@
     "@supabase/supabase-js": "^2.45.4",
     "bcryptjs": "^2.4.3",
     "crypto-browserify": "^3.12.0",
-    "crypto-js": "^4.2.0",
     "firebase": "^10.14.0",
     "hotel-booking": "file:",
     "rxjs": "~7.8.0",
@@ -30,16 +29,16 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^16.0.1",
+    "@angular-devkit/build-angular": "^0.1002.1",
     "@angular/cli": "^16.2.16",
     "@angular/compiler-cli": "^16.0.0",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
-    "karma": "~6.4.0",
+    "karma": "^1.3.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
+    "karma-jasmine": "^4.0.2",
+    "karma-jasmine-html-reporter": "^1.7.0",
     "typescript": "~5.0.2"
   }
 }

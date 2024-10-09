@@ -1,1 +1,38 @@
-<p>home works!</p>
+<!-- home.component.html -->
+
+<nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Reservas</a></li>
+      <li><a href="#">Perfil</a></li>
+      <li><a href="#" (click)="logout()">Cerrar sesión</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Contenedor del formulario de búsqueda -->
+  <div class="search-container">
+    <!-- Campo de destino -->
+    <div class="search-item">
+      <label for="destination">¿A dónde quieres ir?</label>
+      <input type="text" id="destination" placeholder="¿A dónde quieres ir?" [(ngModel)]="destination" />
+    </div>
+  
+    <!-- Campo de fechas -->
+    <div class="search-item">
+      <label for="dates">Fechas</label>
+      <input type="text" id="dates" placeholder="Seleccionar fechas" [(ngModel)]="dates" />
+    </div>
+  
+    <!-- Campo de huéspedes -->
+    <div class="search-item">
+      <label for="guests">Huéspedes</label>
+      <input type="text" id="guests" placeholder="2 personas, 1 habitación" [(ngModel)]="guests" />
+    </div>
+  
+    <!-- Botón de búsqueda -->
+    <div class="search-item">
+      <button (click)="search()">Buscar</button>
+    </div>
+  </div>
+  
+  
