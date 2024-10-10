@@ -1,17 +1,52 @@
-<form (ngSubmit)="onLogin()">
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" [(ngModel)]="email" name="email" required />
+<!-- Login Component HTML -->
+<body>
+  <div class="box">
+    <div class="container">
+      <div class="top-header">
+        <span>Hotel Booking</span>
+        <header>Iniciar Sesión</header>
+      </div>
+
+      <form (ngSubmit)="onLogin()">
+        <div class="input-field"> <!-- Updated class -->
+          <input
+            type="email"
+            class="input" 
+            placeholder="Email"
+            required
+            [(ngModel)]="email"
+            name="email"
+          />
+          <i class="bx bx-user"></i>
+        </div>
+
+        <div class="input-field"> <!-- Updated class -->
+          <input
+            type="password"
+            class="input"
+            placeholder="Contraseña"
+            required
+            [(ngModel)]="password"
+            name="password"
+          />
+          <i class="bx bx-alt"></i>
+        </div>
+
+        <div class="input-field">
+          <input type="submit" class="submit" value="Inicio" /> <!-- Added class -->
+        </div>
+
+        <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+      </form>
+
+      <div class="bottom">
+        <div class="left">
+          <label><a (click)="goToRegister()">Regístrate</a></label>
+        </div>
+        <div class="right">
+          <label><a href="#">Olvidaste tu contraseña?</a></label>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" [(ngModel)]="password" name="password" required />
-  </div>
-
-  <button type="submit">Login</button>
-  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
-
-  <!-- Botón para redirigir a la página de registro -->
-  <button type="button" (click)="goToRegister()">¿No tienes cuenta? Regístrate</button>
-</form>
+</body>

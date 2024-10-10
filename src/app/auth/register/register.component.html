@@ -1,29 +1,84 @@
-<form (ngSubmit)="onRegister()">
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" [(ngModel)]="email" required />
-  </div>
+<!-- Register Component HTML -->
+<body>
+  <div class="box">
+    <div class="container">
+      <div class="top-header">
+        <span>Hotel Booking</span>
+        <header>Registro</header>
+      </div>
 
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" [(ngModel)]="password" required />
-  </div>
+      <form (ngSubmit)="onRegister()">
+        <div class="input-field"> <!-- Adjusted class -->
+          <input
+            type="email"
+            class="input" 
+            placeholder="Email"
+            required
+            [(ngModel)]="email"
+            name="email"
+          />
+          <i class="bx bx-user"></i>
+        </div>
 
-  <div>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" [(ngModel)]="name" required />
-  </div>
+        <div class="input-field"> <!-- Adjusted class -->
+          <input
+            type="password"
+            class="input"
+            placeholder="Contraseña"
+            required
+            [(ngModel)]="password"
+            name="password"
+          />
+          <i class="bx bx-alt"></i>
+          <div class="password-strength-flex">
+            <ngx-password-strength-bar [passwordToCheck]="password"></ngx-password-strength-bar>
+            <div class="password-characters">
+              <span>caracteres:</span>
+              <span class="password-length" [ngClass]="{'valid-length': password.length >= 12}">
+                {{ password.length }}
+              </span>
+            </div>
+          </div>
+        </div>
 
-  <div>
-    <label for="phone">Phone</label>
-    <input type="text" id="phone" name="phone" [(ngModel)]="phone" required />
-  </div>
+        <div class="input-field"> <!-- Adjusted class -->
+          <input
+            type="text"
+            class="input" 
+            placeholder="Nombre"
+            required
+            [(ngModel)]="name"
+            name="name"
+          />
+        </div>
 
-  <div>
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address" [(ngModel)]="address" />
-  </div>
+        <div class="input-field"> <!-- Adjusted class -->
+          <input
+            type="text"
+            class="input" 
+            placeholder="Teléfono"
+            required
+            [(ngModel)]="phone"
+            name="phone"
+          />
+        </div>
 
-  <button type="submit">Register</button>
-  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
-</form>
+        <div class="input-field"> <!-- Adjusted class -->
+          <input
+            type="text"
+            class="input"
+            placeholder="Dirección"
+            [(ngModel)]="address"
+            name="address"
+          />
+        </div>
+
+        <div class="input-field">
+          <input type="submit" class="submit" value="Registrar" /> <!-- Added class -->
+        </div>
+        
+        <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+      </form>
+    </div>
+  </div>
+</body>
