@@ -1,0 +1,45 @@
+<nav>
+    <ul class="navbar">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="reservas">Reservas</a></li>
+      <li><a href="perfil">Perfil</a></li>
+      <li><a href="login">Iniciar Sesion</a></li>
+    </ul>
+  </nav>
+<div class="rooms-section">
+    <h2>Administración de Habitaciones</h2>
+    <button (click)="openModal(null)" class="add-room-btn">Agregar Nueva Habitación</button>
+    <div class="rooms-container">
+        <div class="room-card" *ngFor="let room of rooms">
+            <img [src]="room.imageUrl" alt="{{ room.name }}">
+            <div class="room-info">
+                <h3>{{ room.name }}</h3>
+                <p>{{ room.description }}</p>
+                <p><strong>Precio: ${{ room.price }} por noche</strong></p>
+                <button (click)="openModal(room)">Editar</button>
+                <button (click)="deleteRoom(room)">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="roomModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <h2>{{ currentRoom ? 'Editar Habitación' : 'Agregar Nueva Habitación' }}</h2>
+            <label for="name">Nombre:</label>
+            <input id="name" [(ngModel)]="tempRoom.name" type="text" placeholder="Nombre de la habitación" required>
+            <br>
+            <label for="description">Descripción:</label>
+            <textarea id="description" [(ngModel)]="tempRoom.description" placeholder="Descripción de la habitación" required></textarea>
+            <br>
+            <label for="price">Precio:</label>
+            <input id="price" [(ngModel)]="tempRoom.price" type="number" placeholder="Precio por noche" required>
+            <br>
+            <label for="imageUrl">URL de la Imagen:</label>
+            <input id="imageUrl" [(ngModel)]="tempRoom.imageUrl" type="text" placeholder="URL de la imagen" required>
+            <br>
+            <button (click)="saveRoom()">Guardar</button>
+        </div>
+    </div>
+</div>

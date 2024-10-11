@@ -18,6 +18,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { NgxPasswordStrengthBarModule } from 'ngx-password-strength-bar'; // Corrige esto
 import { ToastrModule } from 'ngx-toastr';
 import { ReservasComponent } from './reservas/reservas.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { AdminhabitacionesComponent } from './admin/adminhabitaciones/adminhabitaciones.component';
+import { AdminpromocionesComponent } from './admin/adminhabitaciones/adminpromociones/adminpromociones.component';
+
 
 
 @NgModule({
@@ -26,7 +30,11 @@ import { ReservasComponent } from './reservas/reservas.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    ReservasComponent
+    ReservasComponent,
+    PerfilComponent,
+    AdminhabitacionesComponent,
+    AdminpromocionesComponent,
+   
   ],
   imports: [
     BrowserModule,

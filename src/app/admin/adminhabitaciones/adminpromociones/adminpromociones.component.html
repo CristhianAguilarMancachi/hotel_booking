@@ -1,0 +1,42 @@
+
+<nav>
+    <ul class="navbar">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="reservas">Reservas</a></li>
+      <li><a href="perfil">Perfil</a></li>
+      <li><a href="login">Iniciar Sesion</a></li>
+    </ul>
+  </nav>
+<div class="promotions-section">
+    <h2>Gestión de Promociones</h2>
+    <button (click)="openModal(null)" class="add-promotion-btn">Agregar Nueva Promoción</button>
+    <div class="promotions-container">
+        <div class="promotion-card" *ngFor="let promotion of promotions">
+            <img [src]="promotion.imageUrl" alt="{{ promotion.title }}">
+            <div class="promotion-info">
+                <h3>{{ promotion.title }}</h3>
+                <p>{{ promotion.description }}</p>
+                <button (click)="openModal(promotion)">Editar</button>
+                <button (click)="deletePromotion(promotion)">Eliminar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="promotionModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <h2>{{ currentPromotion ? 'Editar Promoción' : 'Agregar Nueva Promoción' }}</h2>
+            <label for="title">Título:</label>
+            <input id="title" [(ngModel)]="tempPromotion.title" type="text" placeholder="Título de la promoción" required>
+            <br>
+            <label for="description">Descripción:</label>
+            <textarea id="description" [(ngModel)]="tempPromotion.description" placeholder="Descripción de la promoción" required></textarea>
+            <br>
+            <label for="imageUrl">URL de la Imagen:</label>
+            <input id="imageUrl" [(ngModel)]="tempPromotion.imageUrl" type="text" placeholder="URL de la imagen" required>
+            <br>
+            <button (click)="savePromotion()">Guardar</button>
+        </div>
+    </div>
+</div>
