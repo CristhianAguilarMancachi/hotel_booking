@@ -11,9 +11,9 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'reservas', component: ReservasComponent, canActivate: [AuthGuard] }, // Home está protegido por el guard
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirige a login por defecto
-  { path: '**', redirectTo: '/login' } // Redirige rutas no encontradas al login
+  { path: 'reservas', component: ReservasComponent}, // Home está protegido por el guard
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirige a login por defecto
+  { path: '**', redirectTo: 'home' } // Redirige rutas no encontradas al login
 ];
 
 @NgModule({

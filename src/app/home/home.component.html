@@ -4,9 +4,9 @@
 <nav>
   <ul class="navbar">
     <li><a href="#">Inicio</a></li>
-    <li><a href="#reservas">Reservas</a></li>
+    <li><a href="reservas">Reservas</a></li>
     <li><a href="#">Perfil</a></li>
-    <li><a href="#">Cerrar sesión</a></li>
+    <li><a href="login">Iniciar Sesion</a></li>
   </ul>
 </nav>
 <!-- Formulario de búsqueda de habitaciones -->
@@ -94,6 +94,120 @@
     </div>
   </div>
 </div>
+
+<!-- Información del hotel -->
+<div class="hotel-info1 container mt-5">
+  <h4 class="hotel-info1-title t-subtitle-l col-12 px-xl-0 pb-4 mb-0">Información del Hotel</h4>
+  <ul class="list-unstyled">
+    <li><i class="las la-clock"></i> <strong>Check-in:</strong> 14:00 PM</li>
+    <li><i class="las la-clock"></i> <strong>Check-out:</strong> 11:00 AM</li>
+    <li><i class="las la-phone"></i> <strong>Teléfono de contacto:</strong> +591 12345678</li>
+    <li><i class="las la-map-marker"></i> <strong>Dirección:</strong> Av. Principal, Ciudad, País</li>
+    <li><i class="las la-ban"></i> <strong>Política de cancelación:</strong> Cancelación gratuita hasta 24 horas antes del check-in.</li>
+    <li><i class="las la-wifi"></i> <strong>Wi-Fi:</strong> Gratis en todas las áreas</li>
+    <li><i class="las la-utensils"></i> <strong>Desayuno:</strong> Incluido</li>
+    <li><i class="las la-car"></i> <strong>Estacionamiento:</strong> Disponible</li>
+  </ul>
+</div>
+<!-- Carrusel de promociones o paquetes especiales -->
+<!-- Carrusel de promociones o paquetes especiales -->
+<div id="promotionsCarousel" class="carousel slide mx-auto" style="max-width: 80%;" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#promotionsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#promotionsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#promotionsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <!-- Primer slide -->
+    <div class="carousel-item active">
+      <img src="https://via.placeholder.com/1200x500" class="d-block w-100" alt="Paquete especial 1">
+      <div class="carousel-caption d-block bg-dark bg-opacity-50 p-3 rounded">
+        <h5>Escapada Romántica</h5>
+        <p>Disfruta de una estadía para dos personas con cena romántica incluida y vistas espectaculares.</p>
+      </div>
+    </div>
+    <!-- Segundo slide -->
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/1200x500" class="d-block w-100" alt="Paquete especial 2">
+      <div class="carousel-caption d-block bg-dark bg-opacity-50 p-3 rounded">
+        <h5>Fin de Semana Familiar</h5>
+        <p>Aprovecha un descuento especial para familias en habitaciones dobles y triples con actividades incluidas.</p>
+      </div>
+    </div>
+    <!-- Tercer slide -->
+    <div class="carousel-item">
+      <img src="https://via.placeholder.com/1200x500" class="d-block w-100" alt="Paquete especial 3">
+      <div class="carousel-caption d-block bg-dark bg-opacity-50 p-3 rounded">
+        <h5>Plan Todo Incluido</h5>
+        <p>Disfruta de todas las comidas, bebidas y actividades incluidas en tu estadía de lujo.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Botón Anterior -->
+  <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#promotionsCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <!-- Botón Siguiente -->
+  <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#promotionsCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+
+<!-- Sección de comodidades del hotel -->
+<div class="content-container color-scheme1">
+  <div class="key-amenities">
+    <div class="amenities-container d-flex flex-column container">
+      <h4 class="amenities-title t-subtitle-l col-12 px-xl-0 pb-4 mb-0" style="margin: 0 auto; color: rgb(85, 84, 84); font-size: medium  ;">COMODIDADES DESTACADAS</h4>
+      <div class="amenities-content-container px-2 px-xl-0">
+        <!-- Tarjetas de comodidades -->
+        <div class="amenities-card">
+          <img src="https://via.placeholder.com/300x200" >
+          <div class="line"></div>
+          <div class="icon">
+            <span class="icon-dining icon-m"></span>
+          </div>
+          <div class="amenities-info">
+            <h5>Restaurante</h5>
+            
+            <p>Gastronomía gourmet a la carta.</p>
+          </div>
+        </div>
+
+        <div class="amenities-card">
+          <img src="https://via.placeholder.com/300x200" >
+          <div class="line"></div>
+          <div class="icon">
+            <span class="icon-fitness-center icon-m"></span>
+          </div>
+          <div class="amenities-info">
+            <h5>Gimnasio</h5>
+            <p>Equipado con lo último en tecnología fitness.</p>
+          </div>
+        </div>
+
+        <div class="amenities-card">
+          <img src="https://via.placeholder.com/300x200" >
+          <div class="line"></div>
+          <div class="icon">
+            <span class="icon-pool icon-m"></span>
+          </div>
+          <div class="amenities-info">
+            <h5>Piscina al aire libre</h5>
+            <p>Una experiencia refrescante con vista a la ciudad.</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
 <style>
 
 </style>
