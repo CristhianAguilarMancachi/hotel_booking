@@ -11,6 +11,8 @@ import { AuthGuard } from './guards/auth.guard';
 //admin
 import { AdminhabitacionesComponent } from './admin/adminhabitaciones/adminhabitaciones.component';
 import { AdminpromocionesComponent } from './admin/adminhabitaciones/adminpromociones/adminpromociones.component';
+import { AdminempleadosComponent } from './adminempleados/adminempleados.component';
+import { AdminRolesComponent } from './adminroles/adminroles.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -21,6 +23,8 @@ const routes: Routes = [
   //admin
   { path: 'gestionhab', component: AdminhabitacionesComponent},
   { path: 'gestprom', component: AdminpromocionesComponent},
+  { path: 'gestempleados', component: AdminempleadosComponent},
+  { path: 'gestroles', component: AdminRolesComponent},
 
 
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirige a login por defecto

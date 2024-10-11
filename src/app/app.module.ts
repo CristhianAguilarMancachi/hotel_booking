@@ -21,6 +21,8 @@ import { ReservasComponent } from './reservas/reservas.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AdminhabitacionesComponent } from './admin/adminhabitaciones/adminhabitaciones.component';
 import { AdminpromocionesComponent } from './admin/adminhabitaciones/adminpromociones/adminpromociones.component';
+import { AdminempleadosComponent } from './adminempleados/adminempleados.component';
+import { AdminRolesComponent } from './adminroles/adminroles.component';
 
 
 
@@ -34,6 +36,9 @@ import { AdminpromocionesComponent } from './admin/adminhabitaciones/adminpromoc
     PerfilComponent,
     AdminhabitacionesComponent,
     AdminpromocionesComponent,
+    AdminempleadosComponent,
+    AdminRolesComponent
+
    
   ],
   imports: [
