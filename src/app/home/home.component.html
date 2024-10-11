@@ -1,41 +1,99 @@
 <!-- home.component.html -->
 
+<!-- Barra de navegación -->
 <nav>
-  <ul>
+  <ul class="navbar">
     <li><a href="#">Inicio</a></li>
     <li><a href="#">Reservas</a></li>
     <li><a href="#">Perfil</a></li>
-    <li><a href="#" (click)="logout()">Cerrar sesión</a></li>
+    <li><a href="#">Cerrar sesión</a></li>
   </ul>
 </nav>
-
-<!-- Contenedor del formulario de búsqueda -->
+<!-- Formulario de búsqueda de habitaciones -->
 <div class="search-container">
   <!-- Campo de destino -->
   <div class="search-item">
       <label for="destination">¿A dónde quieres ir?</label>
-      <input type="text" id="destination" placeholder="¿A dónde quieres ir?" [(ngModel)]="destination" />
+      <input type="text" id="destination" placeholder="Escribe tu destino" />
   </div>
 
   <!-- Campo de fechas -->
   <div class="search-item">
       <label for="dates">Fechas</label>
-      <mat-form-field appearance="fill">
-          <mat-label>Seleccionar fechas</mat-label>
-          <input matInput [matDatepicker]="picker" [(ngModel)]="dates" placeholder="Seleccionar fechas">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+      <input type="text" id="dates" placeholder="Seleccionar fechas" />
   </div>
 
   <!-- Campo de huéspedes -->
   <div class="search-item">
       <label for="guests">Huéspedes</label>
-      <input type="text" id="guests" placeholder="2 personas, 1 habitación" [(ngModel)]="guests" />
+      <input type="text" id="guests" placeholder="2 personas, 1 habitación" />
   </div>
 
   <!-- Botón de búsqueda -->
   <div class="search-item">
-      <button (click)="search()">Buscar</button>
+      <button>Buscar</button>
   </div>
 </div>
+<!-- Banner principal del hotel -->
+<div class="banner">
+  <img src="https://carrolldesign.co.uk/wp-content/uploads/2022/09/hotel-lobby.jpg" alt="Banner del Hotel">
+  <div class="banner-text">
+    <h1>Bienvenido a Hotel UCB</h1>
+    
+  </div>
+</div>
+
+<!-- Información sobre el hotel -->
+<div class="hotel-info">
+  <p style="color: darkgrey;">Una experiencia de lujo en el corazón de la ciudad</p>
+  <h2>Sobre Nosotros</h2>
+  <p>
+    El Hotel UCB ofrece una experiencia única con habitaciones elegantes, 
+    restaurantes gourmet y una ubicación envidiable. Ya sea que viajes por 
+    negocios o placer, nuestro hotel tiene todo lo que necesitas para una estancia perfecta.
+  </p>
+</div>
+
+
+
+<!-- Sección de habitaciones disponibles -->
+<div class="rooms-section">
+  <h2>Habitaciones Disponibles</h2>
+  <div class="rooms-container">
+    <!-- Habitación 1 -->
+    <div class="room-card">
+      <img src="https://via.placeholder.com/300x200" alt="Habitación 1">
+      <div class="room-info">
+        <h3>Suite Deluxe</h3>
+        <p>Una suite de lujo con vista a la ciudad, cama king size, jacuzzi, y desayuno incluido.</p>
+        <p><strong>Precio: $200 por noche</strong></p>
+        <button>Reservar ahora</button>
+      </div>
+    </div>
+    
+    <!-- Habitación 2 -->
+    <div class="room-card">
+      <img src="https://via.placeholder.com/300x200" alt="Habitación 2">
+      <div class="room-info">
+        <h3>Habitación Doble</h3>
+        <p>Perfecta para dos personas, con camas individuales y todas las comodidades modernas.</p>
+        <p><strong>Precio: $120 por noche</strong></p>
+        <button>Reservar ahora</button>
+      </div>
+    </div>
+    
+    <!-- Habitación 3 -->
+    <div class="room-card">
+      <img src="https://via.placeholder.com/300x200" alt="Habitación 3">
+      <div class="room-info">
+        <h3>Habitación Familiar</h3>
+        <p>Ideal para familias, incluye dos camas dobles, área de estar y vista al jardín.</p>
+        <p><strong>Precio: $180 por noche</strong></p>
+        <button>Reservar ahora</button>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+
+</style>
