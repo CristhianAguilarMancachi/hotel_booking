@@ -1,0 +1,87 @@
+/* Barra de navegación */
+nav {
+    background-color: #333;
+    padding: 1em;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li {
+    padding: 0 10px;
+  }
+  
+  /* Sección de reservas */
+  .reservations-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .reservations-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Contenedor de reservas */
+  .reservations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  /* Tarjeta de reserva */
+  .reservation-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 350px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reservation-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .reservation-info p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button + button {
+    margin-left: 10px;
+    background-color: #ff4d4d;
+  }
+  
+  button + button:hover {
+    background-color: #e60000;
+  }
+  

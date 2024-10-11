@@ -17,6 +17,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxPasswordStrengthBarModule } from 'ngx-password-strength-bar'; // Corrige esto
 import { ToastrModule } from 'ngx-toastr';
+import { ReservasComponent } from './reservas/reservas.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ToastrModule } from 'ngx-toastr';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    ReservasComponent
   ],
   imports: [
     BrowserModule,
