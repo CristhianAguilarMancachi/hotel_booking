@@ -13,8 +13,12 @@
         <div class="room-card" *ngFor="let room of rooms">
             <img [src]="room.imageUrl" alt="{{ room.name }}">
             <div class="room-info">
-                <h3>{{ room.name }}</h3>
-                <p>{{ room.description }}</p>
+                <h3>Nombre: {{ room.name }}</h3>
+                <p>Disponible: {{ room.is_available }}</p>
+                <p>Capacidad: {{ room.capacidad }}</p>
+                <p>Creada: {{ room.created_at }}</p>
+                <p>Editada: {{ room.updated_at }}</p>
+                
                 <p><strong>Precio: ${{ room.price }} por noche</strong></p>
                 <button (click)="openModal(room)">Editar</button>
                 <button (click)="deleteRoom(room)">Eliminar</button>
@@ -22,24 +26,41 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div id="roomModal" class="modal" style="display:none;">
-        <div class="modal-content">
-            <span class="close" (click)="closeModal()">&times;</span>
-            <h2>{{ currentRoom ? 'Editar Habitación' : 'Agregar Nueva Habitación' }}</h2>
-            <label for="name">Nombre:</label>
-            <input id="name" [(ngModel)]="tempRoom.name" type="text" placeholder="Nombre de la habitación" required>
-            <br>
-            <label for="description">Descripción:</label>
-            <textarea id="description" [(ngModel)]="tempRoom.description" placeholder="Descripción de la habitación" required></textarea>
-            <br>
-            <label for="price">Precio:</label>
-            <input id="price" [(ngModel)]="tempRoom.price" type="number" placeholder="Precio por noche" required>
-            <br>
-            <label for="imageUrl">URL de la Imagen:</label>
-            <input id="imageUrl" [(ngModel)]="tempRoom.imageUrl" type="text" placeholder="URL de la imagen" required>
-            <br>
-            <button (click)="saveRoom()">Guardar</button>
-        </div>
+  <!-- Modal -->
+<div id="roomModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <h2>{{ currentRoom ? 'Editar Habitación' : 'Agregar Nueva Habitación' }}</h2>
+
+        <label for="name">Nombre de la Habitación:</label>
+        <input id="name" [(ngModel)]="tempRoom.name" type="text" placeholder="Nombre de la habitación" required>
+        <br>
+
+        <label for="descripcion">Descripción:</label>
+        <input id="descripcion" [(ngModel)]="tempRoom.description" type="text" placeholder="Descripción de la habitación" required>
+        <br>
+
+        <label for="precio">Precio:</label>
+        <input id="precio" [(ngModel)]="tempRoom.price" type="number" placeholder="Precio de la habitación" required>
+        <br>
+
+        <label for="imageUrl">URL de la Imagen:</label>
+        <input id="imageUrl" [(ngModel)]="tempRoom.imageUrl" type="text" placeholder="URL de la imagen" required>
+        <br>
+
+        <label for="capacidad">Capacidad:</label>
+        <input id="capacidad" [(ngModel)]="tempRoom.capacidad" type="number" placeholder="Capacidad de la habitación" required>
+        <br>
+
+        <label for="available">Disponible:</label>
+        <select id="available" [(ngModel)]="tempRoom.is_available">
+            <option [ngValue]="true">Sí</option>
+            <option [ngValue]="false">No</option>
+        </select>
+        <br>
+
+        <button (click)="saveRoom()">Guardar</button>
     </div>
 </div>
+
+
